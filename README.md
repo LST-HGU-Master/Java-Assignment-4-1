@@ -1,14 +1,12 @@
-# Autograding Example: Java
-This example project is written in Java, and tested with Gradle/JUnit.
+# 課題 4-1: 配列の宣言と初期化
 
-### The assignment
-The tests are currently failing because of an output mismatch. Fixing the `System.out.println` in the main method will make the tests green.
+### 課題の説明
+3つの整数を実行時引数として受け取り、int型配列numbersに保存する。
+最後にnumbersの中身をカンマ区切りの１行で表示するプログラムを作成しなさい。
 
-### Setup command
-N/A
 
-### Run command
-`gradle test`
-
-### Notes
-- The JDK is installed on GitHub Actions machines, so you're also able to directly invoke `javac`, `java`, or any other CLI command included in the JDK. 
+### 実行例（実行時引数が1 2 3のとき）
+```
+1,2,3
+```
+注: 最後に改行コードをいれること
