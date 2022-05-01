@@ -18,7 +18,14 @@ public class Prog41Test {
         Prog41.main(new String[]{"1", "2", "3"});
 
         // assertion
-        assertEquals("1,2,3\n", bos.toString());
+        try {
+            assertEquals("1,2,3" + System.lineSeparator(), bos.toString(),
+                         "printされた結果が指示と異なります!"
+            );
+        } catch(AssertionError err) {
+            System.setOut(originalOut);
+            throw err;
+        }
 
         // undo the binding in System
         System.setOut(originalOut);
