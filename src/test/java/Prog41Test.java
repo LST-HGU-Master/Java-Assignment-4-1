@@ -1,7 +1,9 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import java.io.*;
-
+/**
+ * @version (20220501)
+ **/
 public class Prog41Test {
 
     @Test
