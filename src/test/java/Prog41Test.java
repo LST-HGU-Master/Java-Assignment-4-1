@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.io.*;
 /**
  * ＠version (20220501) 1st version
- * @version (20261007) int型への変換チェックテストを加え、４つに分割した
+ * @version (20261013) int型への変換チェックテストを加え、４つに分割した
  **/
 public class Prog41Test {
 
@@ -65,9 +65,9 @@ public class Prog41Test {
     public void testOutputEndingWithNewline() {
         Prog41.main(new String[]{"3", "1", "2"});
         
-        String output = bos.toString();
-        assertTrue(output.endsWith(System.lineSeparator()),
-            "出力の末尾に改行がありません。System.out.println を使用してください。"
+        String output = bos.toString().replace("\r\n", "\n");
+            assertTrue(output.endsWith("\n"),
+                "出力の末尾に改行がありません。System.out.println を使用して最後に改行を出力してください。"
         );
     }
 }
